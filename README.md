@@ -9,5 +9,6 @@ Finally, this script was based on example available on "Running Apache Spark sta
 
 ## Docker Compose Example
 To create a simple cluster using [docker-compose](http://docs.docker.com/compose):
+    
     docker-compose up
     
