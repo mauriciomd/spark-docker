@@ -53,7 +53,7 @@ spark-worker-1:
 spark-worker-2:
     image: apache-spark
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
-    hostname: spark-worker-1
+    hostname: spark-worker-2
     environment:
       SPARK_CONF_DIR: /conf
       SPARK_PUBLIC_DNS: 127.0.0.1
