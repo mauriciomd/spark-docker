@@ -22,7 +22,6 @@ RUN git clone https://github.com/Intel-bigdata/HiBench.git
 WORKDIR /HiBench/
 RUN mvn -Dspark=2.1 -Dscala=2.11 clean package
 
-
 # Install Apache Hadoop
 WORKDIR ~/
 RUN wget http://ftp.unicamp.br/pub/apache/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz && \
@@ -41,3 +40,4 @@ RUN wget https://archive.apache.org/dist/spark/spark-2.2.0/spark-2.2.0-bin-hadoo
 ENV SPARK_HOME /spark
 ENV PATH $PATH:$SPARK_HOME/bin
 EXPOSE 4040 6066 7077 8080
+WORKDIR $SPARK_HOME
